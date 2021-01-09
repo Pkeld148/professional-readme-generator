@@ -11,8 +11,9 @@ The goal of this app was to to be able to take user input from the command line,
 ## Installation <a name="installation"></a>
 The user will need to clone this repository onto their computer.  Then, the user will need to run "npm install" in order to utilize the Inquirer package.
 ## Usage <a name="usage"></a>
-[![README Generator Walkthrough Video](http://img.youtube.com/vi/VRLtNm7agUg/0.jpg)](http://www.youtube.com/watch?v=VRLtNm7agUg "README Generator Walkthrough Video")   
-     
+[![README Generator Walkthrough Video](http://img.youtube.com/vi/VRLtNm7agUg/0.jpg)](http://www.youtube.com/watch?v=VRLtNm7agUg "README Generator Walkthrough Video")
+^^ Click for link to video walkthrough.
+
 The user can watch the linked video for instructions, or more simply, run "node index.js" in the command line, then answer all of the following prompts.  Once completed, the README file will be generated as a file named "generatedREADME.md"
 ## Credits <a name="credits"></a>
 A big thanks to the Georgia Tech Boot Camp!
