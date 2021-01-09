@@ -30,26 +30,39 @@ const questions = [
     message: "Anything in the app you'd like to give credit for?",
     name: "credits",
   },
+  {
+    type: "confirm",
+    message: "Would you like to include an MIT license?",
+    name: "license",
+  },
 ];
-
-// TODO: Create a function to write README file
-function writeToFile(filename, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
+    if (response.license === true) {
+      response.license =
+        "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    }
     const createMarkdown = `# ${response.appName}
       
-## Description
+# Description
 ${response.description}
-## Installation
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Credits](#credits)
+4. [License](#licesnse)
+
+## Installation <a name="installation"></a>
 ${response.installation}
-## Usage         
+## Usage <a name="usage"></a>        
 ${response.usage}
-## Credits
+## Credits <a name="credits"></a>
 ${response.credits}
-## License
-`;
+## License <a name="license"></a>
+${response.license}`;
+
     fs.writeFile("generatedREADME.md", createMarkdown, (err) => {
       if (err) throw err;
       console.log("The file has been created!");
