@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -52,7 +51,7 @@ ${response.description}
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Credits](#credits)
-4. [License](#licesnse)
+4. [License](#license)
 
 ## Installation <a name="installation"></a>
 ${response.installation}
